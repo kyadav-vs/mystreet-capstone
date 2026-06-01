@@ -1,0 +1,19 @@
+# Java / Maven
+mystreet-backend/target/
+mystreet-backend/.mvn/wrapper/maven-wrapper.jar
+mystreet-backend/.idea/
+mystreet-backend/*.iml
+
+# Node / React
+mystreet-frontend/node_modules/
+mystreet-frontend/dist/
+mystreet-frontend/.env
+mystreet-frontend/.env.local
+mystreet-frontend/.env.production.local
+
+# OS / IDE
+.DS_Store
+.vscode/
+*.swp
+*.log
+bin/

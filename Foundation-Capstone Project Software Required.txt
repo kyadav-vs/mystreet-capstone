@@ -1,0 +1,13 @@
+Software Download Link Notes
+Java Development Kit 
+(JDK) 17 or higher
+https://www.oracle.com/java/technologies/javase/jdk17-archivedownloads.html
+Node.js (v16 or higher) https://nodejs.org/en/download/
+PostgreSQL https://www.postgresql.org/download/
+Also, install 
+pgAdmin.
+IntelliJ IDEA https://www.jetbrains.com/idea/download/?section=windows
+Visual Studio Code https://code.visualstudio.com/download
+Git https://git-scm.com/downloads
+Postman https://www.postman.com/downloads/
+Apache Maven https://maven.apache.org/download.cg
