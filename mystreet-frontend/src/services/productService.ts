@@ -31,12 +31,12 @@ export const getProducts = async (
   if (maxPrice) params.append('maxPrice', maxPrice);
   if (sort) params.append('sort', sort);
 
-  const response = await axios.get<Product[]>(`${API_BASE_URL}/products`, { params });
+  const response = await api.get<Product[]>('/products', { params });
   return response.data;
 };
 
 export const getProductById = async (id: string): Promise<Product> => {
-  const response = await axios.get<Product>(`${API_BASE_URL}/products/${id}`);
+  const response = await api.get<Product>(`/products/${id}`);
   return response.data;
 };
 

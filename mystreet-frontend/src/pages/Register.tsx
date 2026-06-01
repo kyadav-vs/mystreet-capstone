@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { api } from '../services/productService';
 import { useAuth } from '../context/AuthContext';
 import { ArrowRight, Mail, Lock } from 'lucide-react';
 
@@ -25,7 +25,7 @@ const Register: React.FC = () => {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:8080/api/auth/register', { 
+      const response = await api.post('/auth/register', { 
         email, 
         password,
         isAdmin: false 
