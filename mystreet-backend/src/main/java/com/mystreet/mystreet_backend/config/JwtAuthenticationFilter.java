@@ -67,10 +67,10 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             }
 
             filterChain.doFilter(request, response);
-        } catch (ExpiredJwtException | SignatureException e) {
+        } catch (ExpiredJwtException | SignatureException | UsernameNotFoundException e) {
             handleException(request, response, "Token expired or invalid", HttpStatus.UNAUTHORIZED);
         } catch (Exception e) {
-            e.printStackTrace(); // Log the actual error to Render console
+            e.printStackTrace(); 
             handleException(request, response, "Authentication failed", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -85,6 +85,11 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 .error(status.getReasonPhrase())
                 .message(message)
                 .build();
+
+        new ObjectMapper().writeValue(response.getOutputStream(), errorResponse);
+    }
+}
+;
 
         new ObjectMapper().writeValue(response.getOutputStream(), errorResponse);
     }
