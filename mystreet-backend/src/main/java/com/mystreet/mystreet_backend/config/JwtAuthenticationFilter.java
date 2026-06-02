@@ -1,3 +1,6 @@
+package com.mystreet.mystreet_backend.config;
+
+import com.mystreet.mystreet_backend.service.JwtService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mystreet.mystreet_backend.exception.ErrorResponse;
 import io.jsonwebtoken.ExpiredJwtException;

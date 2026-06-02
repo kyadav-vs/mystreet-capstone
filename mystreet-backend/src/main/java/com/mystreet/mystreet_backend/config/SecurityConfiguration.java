@@ -54,10 +54,10 @@ public class SecurityConfiguration {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        // Allow localhost for dev and dynamic frontend URL for prod
-        configuration.setAllowedOrigins(List.of(
+        // Support any render.com URL and localhost for development
+        configuration.setAllowedOriginPatterns(List.of(
             "http://localhost:5173", 
-            "https://mystreet-frontend.onrender.com" // Placeholder for your actual Render URL
+            "https://*.onrender.com"
         ));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("Authorization", "Content-Type"));

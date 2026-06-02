@@ -17,3 +17,6 @@ mystreet-frontend/.env.production.local
 *.swp
 *.log
 bin/
+
+# Node Version for Render
+.node-version
