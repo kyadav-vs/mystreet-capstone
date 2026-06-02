@@ -70,6 +70,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         } catch (ExpiredJwtException | SignatureException e) {
             handleException(request, response, "Token expired or invalid", HttpStatus.UNAUTHORIZED);
         } catch (Exception e) {
+            e.printStackTrace(); // Log the actual error to Render console
             handleException(request, response, "Authentication failed", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
